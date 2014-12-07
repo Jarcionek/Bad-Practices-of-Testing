@@ -1,0 +1,9 @@
+.project
+.classpath
+.settings
+target
+*.iml
+*.ipr
+.idea
+news-feed-db.ser
+news-feed-db-readme.txt
