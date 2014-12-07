@@ -1,0 +1,13 @@
+Problem:
+
+Meaningless tests names.
+
+
+Solution:
+
+Rename tests to:
+- returnsEntireNewsFeedWhenRequestedPageZeroAndThereAreAsManyMessagesAsPageSize
+- returnsPageZeroCappedToPageSize
+- returnsFullPageIfSecondPageIsRequestedAndThereAreMoreElements
+- returnsLastPageWhenItIsNotFull
+- returnsEmptyNewsFeedWhenNoMessageAreAvailableForRequestedPage
