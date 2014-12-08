@@ -10,7 +10,7 @@ import static org.mockito.Mockito.when;
 import static presentation._01_meaningless_tests_names.PageNumber.pageNumber;
 import static presentation._01_meaningless_tests_names.PageSize.pageSize;
 
-public class NewsFeedPaginatorTest {
+public class RefactoredNewsFeedPaginatorTest {
 
     private UserId userId = new UserId(7654);
 
@@ -19,7 +19,7 @@ public class NewsFeedPaginatorTest {
     private NewsFeedPaginator newsFeedPaginator = new NewsFeedPaginator(dbAdapter);
 
     @Test
-    public void test_1() {
+    public void returnsEntireNewsFeedWhenRequestedPageZeroAndThereAreAsManyMessagesAsPageSize() {
         when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(3), pageNumber(0));
@@ -28,7 +28,7 @@ public class NewsFeedPaginatorTest {
     }
 
     @Test
-    public void test_2() {
+    public void returnsPageZeroCappedToPageSize() {
         when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(2), pageNumber(0));
@@ -37,7 +37,7 @@ public class NewsFeedPaginatorTest {
     }
 
     @Test
-    public void test_3() {
+    public void returnsFullPageIfSecondPageIsRequestedAndThereAreMoreElements() {
         when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4), msg(5), msg(6), msg(7)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(2), pageNumber(2));
@@ -46,7 +46,7 @@ public class NewsFeedPaginatorTest {
     }
 
     @Test
-    public void test_4() {
+    public void returnsLastPageWhenItIsNotFull() {
         when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4), msg(5)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(3), pageNumber(1));
@@ -55,14 +55,13 @@ public class NewsFeedPaginatorTest {
     }
 
     @Test
-    public void test_5() {
+    public void returnsEmptyNewsFeedWhenNoMessageAreAvailableForRequestedPage() {
         when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(3), pageNumber(3));
 
         assertThat(actualNewsFeed, is(sameBeanAs(new NewsFeed())));
     }
-
 
     private static Message msg(int timestamp) {
         return new Message(timestamp, "msg-" + timestamp);

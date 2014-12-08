@@ -1,9 +1,11 @@
 package presentation._01_meaningless_tests_names;
 
-public class NewsFeedDbAdapter {
+public interface NewsFeedDbAdapter {
 
-    public NewsFeed getNewsFeed(UserId userId) {
-        return null;
-    }
+    NewsFeed getNewsFeed(UserId userId);
+
+    void post(UserId userId, Message message);
+
+    void removeAll(UserId userId);
 
 }
