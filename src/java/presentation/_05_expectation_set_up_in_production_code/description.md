@@ -42,6 +42,7 @@ public class ActionValidator {
 The test is using production code as its expectation. The test tests implementation, not behaviour. Behaviour is that strings “MOVE”, “TURN” and “ATTACK” are valid but whether we represent it internally as an enum or not, this test should not care about. What if we change the implementation to use a switch over string? Then we will run code analyzer and notice that none of the three enum values are used so will remove them as well. At this point the above test will be always green because the loop will not iterate at all, and the only usage of this enum will be in the test.
 
 There are also three other problems:
+
 1. there is no test checking the false value, implementation that always returns true would make the test pass
 2. the test will fail if I override toString() method on that enum (another reason for failure)
 3. if I do so, diagnostics will be poor - it will not be shown what the actual input value was
