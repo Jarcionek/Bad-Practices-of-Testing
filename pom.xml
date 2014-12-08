@@ -38,7 +38,7 @@
         <dependency>
             <groupId>com.shazam</groupId>
             <artifactId>shazamcrest</artifactId>
-            <version>0.7</version>
+            <version>0.9</version>
         </dependency>
     </dependencies>
 </project>
