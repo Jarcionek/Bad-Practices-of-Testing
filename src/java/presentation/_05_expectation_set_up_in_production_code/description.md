@@ -1,18 +1,23 @@
-//TODO Jarek: move code to Java files
+## Expectation set up in production code
 
-iterating over enum in production code to validate string
+Iterating over enum in production code to validate a string.
 
-Test code:
 
+### Test code:
+
+```java
 @Test
 public void testValidator() {
     for (Action action : Action.values()) {
-        assertTrue(actionValidator.isValidAction(action.toString()));
+        assertTrue(action.toString(), actionValidator.isValidAction(action.toString()));
     }
 }
+```
 
-Production code:
 
+### Production code:
+
+```java
 public enum Action {
     MOVE,
     TURN,
@@ -29,22 +34,26 @@ public class ActionValidator {
         return true;
     }
 }
+```
 
-Problem:
 
-The test is using production code as its expectation. The test tests implementation, not behaviour. Behaviour is that strings “MOVE”, “TURN” and “ATTACK” are valid but whether we represent it internally as an enum or not, this test should not care about. What if change the implementation to use a switch over string? Then we will run code analyzer and notice that none of the three enum values are used so will remove them as well. At this point the above test will be always green because the loop will not iterate at all, and the only usage of this enum will be in the test.
+### Problem:
+
+The test is using production code as its expectation. The test tests implementation, not behaviour. Behaviour is that strings “MOVE”, “TURN” and “ATTACK” are valid but whether we represent it internally as an enum or not, this test should not care about. What if we change the implementation to use a switch over string? Then we will run code analyzer and notice that none of the three enum values are used so will remove them as well. At this point the above test will be always green because the loop will not iterate at all, and the only usage of this enum will be in the test.
 
 There are also three other problems:
-1. there is no test checking the false value, implementation that always returns true would make the test pass (that could happen if I e.g. catch exception that is not thrown by valueOf method)
+1. there is no test checking the false value, implementation that always returns true would make the test pass
 2. the test will fail if I override toString() method on that enum (another reason for failure)
 3. if I do so, diagnostics will be poor - it will not be shown what the actual input value was
 
-And all these problems are of course on top of loop in the test and meaningless tests’ names.
+And all these problems are of course on top of loop in the test, meaningless tests’ names, poor diagnostics and inability to debug easily.
 
-Solution:
+
+### Solution:
 
 Test behaviour, not implementation. Behaviour is that strings “MOVE”, “TURN” and “ATTACK” are valid and everything else is invalid, so these four tests will do:
 
+```java
 @Test
 public void acceptsMove() {
     assertThat(actionValidator.isValidAction("MOVE"), is(equalTo(true)));
@@ -64,3 +73,4 @@ public void acceptsAttack() {
 public void doesNotAcceptInvalidAction() {
     assertThat(actionValidator.isValidAction("CROUCH"), is(equalTo(false)));
 }
+```
