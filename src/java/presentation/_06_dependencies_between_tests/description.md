@@ -37,4 +37,4 @@ These system properties also pollute your entire runtime environment affecting a
 
 ### Solution:
 
-In this case it will be enough to add @After method that will be clearing this property or add a setup in the first test that will be setting debug property to disabled. However, using system properties for class behaviour can indicate the flaws in your system design - consider using insatiable Properties class instead.
+In this case it will be enough to add ```@After``` method that will be clearing this property or add a setup in the first test that will be setting debug property to disabled. However, using system properties for class behaviour can indicate the flaws in your system design - consider using insatiable Properties class instead.
