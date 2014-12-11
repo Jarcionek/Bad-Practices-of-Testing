@@ -1,7 +1,8 @@
-//TODO Jarek: move code to Java files
+## Testing what the code does not do
 
-Test code:
+### Test code:
 
+```java
 public class DataManagerTest {
 
     private DataSorter dataSorter = mock(DataSorter.class);
@@ -9,7 +10,7 @@ public class DataManagerTest {
     private DataManager dataManager = new DataManager(dataSorter);
 
     @Test(expected = DataSorterException.class)
-    public void testIndexOutOfBoundsException() {
+    public void testDataSorterException() {
         when(dataSorter.sort(any(Data.class))).thenThrow(new DataSorterException());
 
         dataManager.retrieveData();
@@ -18,15 +19,19 @@ public class DataManagerTest {
     ...
 
 }
+```
 
-Problem:
+
+### Problem:
 
 How can you make this test fail? Only by writing a try-catch that swallows the exception. When you write this test, it passes straight away. You have never seen it fail and it doesn’t drive you to write any code.
 
-Solution:
+
+### Solution:
 
 Useless test, delete it.
 
-Notes:
+
+### Notes:
 
 However, if there is another requirement (another test) saying that some exceptions should be swallowed, but you don’t want to have DataSorterException swallowed, you may want to leave this test. You should definitely rename it to e.g. “does not swallow DataSorterException”.
