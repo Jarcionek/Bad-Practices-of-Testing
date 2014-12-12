@@ -18,7 +18,7 @@ public class ParallelTestRunner {
             @Override
             public void run() {
                 for (int i = 0; i < 1000; i++) {
-                    new WeaponTest().calculateRangeWithMultipleUpgrades();
+                    new WeaponTest().calculatesRangeWithMultipleUpgrades();
                 }
             }
         };
