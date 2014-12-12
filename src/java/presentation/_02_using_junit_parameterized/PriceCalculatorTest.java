@@ -12,6 +12,7 @@ import static com.shazam.shazamcrest.MatcherAssert.assertThat;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertTrue;
 import static presentation._02_using_junit_parameterized.Product.priceOf;
 
 @RunWith(Parameterized.class)
@@ -43,7 +44,7 @@ public class PriceCalculatorTest {
     public void test() {
         int totalPrice = priceCalculator.calculateTotal(products);
 
-        assertThat(totalPrice, is(equalTo(expectedTotalPrice)));
+        assertTrue(totalPrice == expectedTotalPrice);
     }
 
 }
