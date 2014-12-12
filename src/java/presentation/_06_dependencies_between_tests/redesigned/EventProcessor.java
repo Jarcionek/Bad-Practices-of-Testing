@@ -15,7 +15,7 @@ public class EventProcessor {
 
     public void process(Event event) {
         if (properties.getProperty("debug") != null && properties.getProperty("debug").equalsIgnoreCase("enabled")) {
-            logger.log(event.getText());
+            logger.log(event.getType());
         }
 
         // actual processing here

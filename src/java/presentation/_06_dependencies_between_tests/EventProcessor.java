@@ -10,7 +10,7 @@ public class EventProcessor {
 
     public void process(Event event) {
         if (System.getProperty("debug") != null && System.getProperty("debug").equalsIgnoreCase("enabled")) {
-            logger.log(event.getText());
+            logger.log(event.getType());
         }
 
         // actual processing here

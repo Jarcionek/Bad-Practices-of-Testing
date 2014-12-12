@@ -2,14 +2,14 @@ package presentation._06_dependencies_between_tests;
 
 public class Event {
 
-    private final String text;
+    private final String type;
 
-    public Event(String text) {
-        this.text = text;
+    public Event(String type) {
+        this.type = type;
     }
 
-    public String getText() {
-        return text;
+    public String getType() {
+        return type;
     }
 
 }
