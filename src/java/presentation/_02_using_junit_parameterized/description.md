@@ -66,7 +66,7 @@ Tests need meaningful names and there are a few options to fix it:
 - in junit 4.11 or later, use a ```name``` value on the ```Parameters``` annotation:
 
 ```java
-public Refactored_2_PriceCalculatorTest(String testName, List<Product> products, int expectedTotalPrice) {
+public PriceCalculatorTest(String testName, List<Product> products, int expectedTotalPrice) {
     this.products = products;
     this.expectedTotalPrice = expectedTotalPrice;
 }
@@ -97,4 +97,4 @@ This will give the following diagnostics:
 
 //TODO Jarek: paste screenshot 02-after-intellij
 
-Further improvement of diagnostics is to use hamcrest and its ```assertThat``` or at least ```assertEquals``` to get a ```ComparisonFailure``` rather than ```AssertionError```. Use ```assertTrue``` and ```assertFalse``` only for asserting on boolean values and always add a meaningful message - "java.lang.AssertionError: false" is not meaningful.
+Further improvement of diagnostics is to use hamcrest and its ```assertThat``` or at least ```assertEquals``` to get a ```ComparisonFailure``` rather than ```AssertionError```. Use ```assertTrue``` and ```assertFalse``` only for asserting on boolean values and always add a meaningful message - "java.lang.AssertionError: false" is not helpful whne the test fails.
