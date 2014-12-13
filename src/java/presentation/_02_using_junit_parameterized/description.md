@@ -51,7 +51,7 @@ First problem is meaningless tests names. The intention is lost and the expectat
 
 But this is not the only problem. What diagnostics will this test give?
 
-//TODO Jarek: paste 02-before-intellij
+![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/02-before-intellij.png)
 
 There is absolutely nothing that could explain why the third test failed. Also you have to count the test parameters to find what input it was. Although it is not a problem with only 3 test parameters, it may get more difficult with 10 or more.
 
@@ -95,6 +95,6 @@ public static Collection data() {
 
 This will give the following diagnostics:
 
-//TODO Jarek: paste screenshot 02-after-intellij
+![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/02-after-intellij.png)
 
 Further improvement of diagnostics is to use hamcrest and its ```assertThat``` or at least ```assertEquals``` to get a ```ComparisonFailure``` rather than ```AssertionError```. Use ```assertTrue``` and ```assertFalse``` only for asserting on boolean values and always add a meaningful message - "java.lang.AssertionError: false" is not helpful whne the test fails.
