@@ -84,3 +84,6 @@ Always give your tests meaningful names. Names that describe how the class behav
 - returnsFullPageIfSecondPageIsRequestedAndThereAreMoreElements
 - returnsLastPageWhenItIsNotFull
 - returnsEmptyNewsFeedWhenNoMessageAreAvailableForRequestedPage
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/description.md)
