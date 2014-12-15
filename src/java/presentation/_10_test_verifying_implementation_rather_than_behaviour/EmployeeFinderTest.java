@@ -1,6 +1,5 @@
 package presentation._10_test_verifying_implementation_rather_than_behaviour;
 
-import junit.framework.Assert;
 import org.junit.Test;
 
 import java.util.List;
