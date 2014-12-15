@@ -1,6 +1,11 @@
 ## Fake not meeting the contract of the interface it is implementing
 
 
+### Domain:
+
+The system polls events from the queue and calls ```EventsReceiver``` with a bulk of events. ```EventsReceiver``` attaches some metadata to the events, logs the events etc. before passing them one by one to ```EventsProcessor```. Bulks of events are guaranteed to be smaller than 1000 and it is required that each event in the same bulk has a unique identifier that allows to distinguish it from others in the bulk. Bulks can be identified by other metadata attached to the event, which is not relevant and hence not shown in the code.
+
+
 ### Production code:
 
 ```java
@@ -30,9 +35,9 @@ public class FakeUuidProvider implements UuidProvider {
 
 public class EventsReceiverTest {
 
-    private Reporter reporter = mock(Reporter.class);
+    private EventsProcessor eventsProcessor = mock(EventsProcessor.class);
 
-    private EventsReceiver eventsReceiver = new EventsReceiver(reporter, new FakeUuidProvider());
+    private EventsReceiver eventsReceiver = new EventsReceiver(eventsProcessor, new FakeUuidProvider());
 
     @Test
     public void reportsEventsWithDifferentUuids() {
@@ -41,8 +46,8 @@ public class EventsReceiverTest {
 
         eventsReceiver.process(eventOne, eventTwo);
 
-        verify(reporter, times(1)).report("eventNameOne", "12345");
-        verify(reporter, times(1)).report("eventNameTwo", "12345");
+        verify(eventsProcessor, times(1)).process(eventOne, "12345");
+        verify(eventsProcessor, times(1)).process(eventTwo, "12345");
     }
 
     // other tests

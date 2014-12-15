@@ -8,9 +8,9 @@ import static org.mockito.Mockito.verify;
 
 public class EventsReceiverTest {
 
-    private Reporter reporter = mock(Reporter.class);
+    private EventsProcessor eventsProcessor = mock(EventsProcessor.class);
 
-    private EventsReceiver eventsReceiver = new EventsReceiver(reporter, new FakeUuidProvider());
+    private EventsReceiver eventsReceiver = new EventsReceiver(eventsProcessor, new FakeUuidProvider());
 
     @Test
     public void reportsEventsWithDifferentUuids() {
@@ -19,8 +19,8 @@ public class EventsReceiverTest {
 
         eventsReceiver.process(eventOne, eventTwo);
 
-        verify(reporter, times(1)).report("eventNameOne", "12345");
-        verify(reporter, times(1)).report("eventNameTwo", "12345");
+        verify(eventsProcessor, times(1)).process(eventOne, "12345");
+        verify(eventsProcessor, times(1)).process(eventTwo, "12345");
     }
 
     // other tests
