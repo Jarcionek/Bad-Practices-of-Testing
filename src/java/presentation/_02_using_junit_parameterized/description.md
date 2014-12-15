@@ -98,3 +98,6 @@ This will give the following diagnostics:
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/02-after-intellij.png)
 
 Further improvement of diagnostics is to use hamcrest and its ```assertThat``` or at least ```assertEquals``` to get a ```ComparisonFailure``` rather than ```AssertionError```. Use ```assertTrue``` and ```assertFalse``` only for asserting on boolean values and always add a meaningful message - "java.lang.AssertionError: false" is not helpful whne the test fails.
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_04_logic_in_the_test/description.md)

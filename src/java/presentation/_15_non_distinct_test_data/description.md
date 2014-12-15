@@ -1,5 +1,6 @@
 ## Non distinct test data
 
+
 ### Test code:
 
 ```java
@@ -41,3 +42,7 @@ Mutation testing - the production code is mutated (changed) and the tests are ru
 ### Solution:
 
 Extra tools (e.g. mutation testing framework) can help detect problems, but in this case it would be really used to resolve a technical debt of the test. It is enough to just make app id and user id different. Always try to make test data distinct so you will protect yourself from incorrectly using another variable of the same type.
+
+
+#### [Back to main page](https://github.com/Jarcionek/Bad-Practices-of-Testing)
+

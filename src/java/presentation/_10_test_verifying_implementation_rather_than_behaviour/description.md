@@ -103,3 +103,6 @@ Many of these problems were caused by the fact that this implementation was not 
 Test behaviour, not implementation. All tests should be calling only method ```findEmployeesWithSalaryInRange```. Whether this method has logic extracted to private method, is using static methods from some other class or is using third party libraries, is not relevant. The method is supposed to return employees with salary in requested range, no matter how.
 
 If a piece of logic is so large that you need to extract it to a method and test is separately, extract it to another class and make it dependency of this class - you will be able to mock it and not care about what it does, because it has its own unit tests.
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_11_swallowing_assertion_error/description.md)

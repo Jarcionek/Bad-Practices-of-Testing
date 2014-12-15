@@ -61,3 +61,6 @@ public void returnsTheNumberForNumbersNotDivisbleByThreeNorFive() {
 ### Notes:
 
 You could say that the simplest implementation to make it pass is to just use comparison on the number instead of having division and checking on the remainder. Although this is true, the goal of tests is to help us implement the feature, not to show that they are passing despite feature being incomplete/incorrect. We know what we aim for and our code will be either reviewed or written while pair programming, so it’s unlikely that such problem would arise in real life. However, if it doesn’t persuade you, feel free to add 3 extra tests for 6, 10 and 30.
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_05_expectation_set_up_in_production_code/description.md)

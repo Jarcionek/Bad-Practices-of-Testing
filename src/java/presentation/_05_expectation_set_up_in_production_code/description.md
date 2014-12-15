@@ -1,4 +1,4 @@
-## Expectation set up in production code
+## Test's expectations set up in production code
 
 Iterating over enum in production code to validate a string.
 
@@ -80,3 +80,6 @@ public void doesNotAcceptInvalidAction() {
     assertThat(actionValidator.isValidAction("CROUCH"), is(equalTo(false)));
 }
 ```
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_06_dependencies_between_tests/description.md)

@@ -53,3 +53,6 @@ This test will be green. If there is no other test using Employee class, you wil
 ### Solution:
 
 Never mock data objects. Mock only methods that have unit tests.
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_13_testing_what_the_code_does_not_do/description.md)

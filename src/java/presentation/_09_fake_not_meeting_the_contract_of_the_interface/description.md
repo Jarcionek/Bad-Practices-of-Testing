@@ -1,5 +1,6 @@
 ## Fake not meeting the contract of the interface it is implementing
 
+
 ### Production code:
 
 ```java
@@ -73,3 +74,6 @@ public class FakeUuidProvider implements UuidProvider {
 
 }
 ```
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_10_test_verifying_implementation_rather_than_behaviour/description.md)

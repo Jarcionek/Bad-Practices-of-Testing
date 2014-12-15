@@ -1,5 +1,6 @@
 ## Multiple assert statements to verify a list
 
+
 ### Test code:
 
 ```java
@@ -83,3 +84,6 @@ The test is easy to understand, you can clearly see expected order of messages, 
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/after-console.png)
 
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/after-comparison.png)
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_09_fake_not_meeting_the_contract_of_the_interface/description.md)

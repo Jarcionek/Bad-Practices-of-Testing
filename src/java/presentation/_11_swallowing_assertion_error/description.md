@@ -32,3 +32,6 @@ Another problem is that fail() gives poor diagnostics and all we will see is “
 2. If you do not assert on exception’s message, use ```@Test(expected = DbError.class)``` instead of try-catch
 3. Consider putting ```fail()``` after the catch block and putting ```return``` inside it
 4. Always add a meaningful message to the ```fail()``` statement - here it could be e.g. “expected DbError but not thrown”
+
+
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_12_mocking_data_objects/description.md)
