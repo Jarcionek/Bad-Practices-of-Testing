@@ -1,4 +1,4 @@
-package presentation._07_static_builder;
+package presentation._07_non_thread_safe_tests;
 
 import org.junit.Test;
 
@@ -6,18 +6,18 @@ public class ParallelTestRunner {
 
     @Test
     public void runBothTestsRepeatedlyInParallel() throws InterruptedException {
-        Thread one = new Thread() {
+        Thread one = new Thread("one") {
             @Override
             public void run() {
-                for (int i = 0; i < 1000; i++) {
+                for (int i = 0; i < 10000; i++) {
                     new WeaponTest().calculatesRangeWithOneUpgrade();
                 }
             }
         };
-        Thread two = new Thread() {
+        Thread two = new Thread("two") {
             @Override
             public void run() {
-                for (int i = 0; i < 1000; i++) {
+                for (int i = 0; i < 10000; i++) {
                     new WeaponTest().calculatesRangeWithMultipleUpgrades();
                 }
             }

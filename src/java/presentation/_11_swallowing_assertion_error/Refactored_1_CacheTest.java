@@ -1,6 +1,5 @@
 package presentation._11_swallowing_assertion_error;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.fail;

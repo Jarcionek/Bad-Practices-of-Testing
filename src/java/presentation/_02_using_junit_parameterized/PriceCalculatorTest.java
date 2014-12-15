@@ -8,10 +8,7 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Collection;
 import java.util.List;
 
-import static com.shazam.shazamcrest.MatcherAssert.assertThat;
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertTrue;
 import static presentation._02_using_junit_parameterized.Product.priceOf;
 
