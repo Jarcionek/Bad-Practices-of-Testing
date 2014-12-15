@@ -1,6 +1,6 @@
-//TODO Jarek: convert txt files into md files so they can be viewed nicely in github (leave code in them)
+- - - -
 
-//TODO Jarek: other examples
+loop in the test
 
 - - - -
 
