@@ -42,7 +42,7 @@ As another example, think of a “donate” function which allows to make anonym
 
 ### Solution:
 
-Avoid using values which have a special meaning in the tested context. Don’t use default values (0, false, null) or any other special values. Use a random value instead or something that stands out as incorrect, e.g. 123 or 123456.
+Avoid using values which have a special meaning in the given context. Do not use default values (0, false, null) or any other special values. Use a random value instead or something that stands out as incorrect, e.g. 55555 or 123456.
 
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_15_non_distinct_test_data/description.md)
