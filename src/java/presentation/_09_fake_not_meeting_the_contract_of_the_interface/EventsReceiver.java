@@ -2,18 +2,18 @@ package presentation._09_fake_not_meeting_the_contract_of_the_interface;
 
 public class EventsReceiver {
 
-    private final EventsProcessor eventsProcessor;
+    private final EventProcessor eventProcessor;
     private final UuidProvider uuidProvider;
 
-    public EventsReceiver(EventsProcessor eventsProcessor, UuidProvider uuidProvider) {
-        this.eventsProcessor = eventsProcessor;
+    public EventsReceiver(EventProcessor eventProcessor, UuidProvider uuidProvider) {
+        this.eventProcessor = eventProcessor;
         this.uuidProvider = uuidProvider;
     }
 
     public void process(Event... events) {
-        String uuid = uuidProvider.next();
+        String uuid = uuidProvider.nextUuid();
         for (Event event : events) {
-            eventsProcessor.process(event, uuid);
+            eventProcessor.process(event, uuid);
         }
 
         // other code

@@ -5,7 +5,7 @@ public class RefactoredFakeUuidProvider implements UuidProvider {
     private int counter = 0;
 
     @Override
-    public String next() {
+    public String nextUuid() {
         return "" + counter++;
     }
 

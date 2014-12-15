@@ -9,9 +9,10 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 public class RefactoredEventsReceiverTest {
 
-    private EventsProcessor eventsProcessor = mock(EventsProcessor.class);
+    private EventProcessor eventProcessor = mock(EventProcessor.class);
+    private UuidProvider uuidProvider = new RefactoredFakeUuidProvider();
 
-    private EventsReceiver eventsReceiver = new EventsReceiver(eventsProcessor, new RefactoredFakeUuidProvider());
+    private EventsReceiver eventsReceiver = new EventsReceiver(eventProcessor, uuidProvider);
 
     @Test
     public void reportsEventsWithDifferentUuids() {
@@ -20,9 +21,9 @@ public class RefactoredEventsReceiverTest {
 
         eventsReceiver.process(eventOne, eventTwo);
 
-        verify(eventsProcessor, times(1)).process(eventOne, "0");
-        verify(eventsProcessor, times(1)).process(eventTwo, "1");
-        verifyNoMoreInteractions(eventsProcessor);
+        verify(eventProcessor, times(1)).process(eventOne, "0");
+        verify(eventProcessor, times(1)).process(eventTwo, "1");
+        verifyNoMoreInteractions(eventProcessor);
     }
 
     // other tests
