@@ -1,12 +1,12 @@
 package presentation._14_asserting_on_default_value;
 
-public class StatisticsReporter {
+public class StatisticsGenerator {
 
-    private final FlightsManager flightsManager;
+    private final FlightManager flightManager;
     private final DbStatisticsProxy dbStatisticsProxy;
 
-    public StatisticsReporter(FlightsManager flightsManager, DbStatisticsProxy dbStatisticsProxy) {
-        this.flightsManager = flightsManager;
+    public StatisticsGenerator(FlightManager flightManager, DbStatisticsProxy dbStatisticsProxy) {
+        this.flightManager = flightManager;
         this.dbStatisticsProxy = dbStatisticsProxy;
     }
 

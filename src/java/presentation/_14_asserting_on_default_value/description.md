@@ -1,25 +1,30 @@
 ## Asserting on default value
 
 
+### Domain:
+
+Airlines have a system to create and store statistics about their flights, customers, income and so on. After each flight (after crew reports that all passengers have been checked out) the system calls ```StatisticsGenerator``` that takes from ```FlightManager``` all data required for the report and saves them to the database using ```DbStatisticsProxy```. One of the values the report contains is how many people bought a ticket but did not use it.
+
+
 ### Test code:
 
 ```java
-public class StatisticsReporterTest {
+public class StatisticsGeneratorTest {
 
-    private FlightsManager flightsManager = mock(FlightsManager.class);
+    private static final int NUMBER_OF_BOOKED_AND_NOT_USED_SEATS = 0;
+
+    private FlightManager flightManager = mock(FlightManager.class);
     private DbStatisticsProxy dbStatisticsProxy = mock(DbStatisticsProxy.class);
-    private int numberOfBookedAndNotUsedSeats = 0;
 
-    private StatisticsReporter statisticsReporter = new StatisticsReporter(flightsManager, dbStatisticsProxy);
+    private StatisticsGenerator statisticsGenerator = new StatisticsGenerator(flightManager, dbStatisticsProxy);
 
     @Test
     public void savesTheNumberOfCustomersWhoMissedTheirFlight() {
-        when(flightsManager.getBookedUnusedSeats()).thenReturn(numberOfBookedAndNotUsedSeats);
+        when(flightManager.getBookedUnusedSeats()).thenReturn(NUMBER_OF_BOOKED_AND_NOT_USED_SEATS);
 
-        statisticsReporter.generateReport();
+        statisticsGenerator.generateReport();
 
-        verify(dbStatisticsProxy,
-                times(1)).saveNumberOfPeopleWhoMissedTheirFlight(numberOfBookedAndNotUsedSeats);
+        verify(dbStatisticsProxy, times(1)).saveNumberOfPeopleWhoMissedTheirFlight(NUMBER_OF_BOOKED_AND_NOT_USED_SEATS);
     }
 
 }

@@ -1,6 +1,6 @@
 package presentation._14_asserting_on_default_value;
 
-public interface FlightsManager {
+public interface FlightManager {
 
     int getBookedUnusedSeats();
 
