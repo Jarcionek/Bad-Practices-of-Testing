@@ -37,7 +37,8 @@ public class NewsFeedPaginatorTest {
 
     @Test
     public void test_3() {
-        when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4), msg(5), msg(6), msg(7)));
+        when(dbAdapter.getNewsFeed(userId))
+                .thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4), msg(5), msg(6), msg(7)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(2), pageNumber(2));
 
@@ -46,7 +47,8 @@ public class NewsFeedPaginatorTest {
 
     @Test
     public void test_4() {
-        when(dbAdapter.getNewsFeed(userId)).thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4), msg(5)));
+        when(dbAdapter.getNewsFeed(userId))
+                .thenReturn(new NewsFeed(msg(1), msg(2), msg(3), msg(4), msg(5)));
 
         NewsFeed actualNewsFeed = newsFeedPaginator.fetch(userId, pageSize(3), pageNumber(1));
 

@@ -25,7 +25,8 @@ public class PriceCalculatorTest {
         return asList(new Object[][] {
                 {asList(APPLE, ORANGE), priceOf(APPLE) + priceOf(ORANGE)},
                 {asList(APPLE, ORANGE, APPLE, APPLE), priceOf(APPLE) * 2 + priceOf(ORANGE)},
-                {asList(APPLE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE), priceOf(APPLE) + priceOf(ORANGE) * 3},
+                {asList(APPLE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE),
+                                                                   priceOf(APPLE) + priceOf(ORANGE) * 3},
         });
     }
 

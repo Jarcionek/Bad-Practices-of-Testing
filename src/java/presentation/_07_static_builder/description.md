@@ -16,14 +16,16 @@ public class WeaponTest {
     private static final int MAXIMUM = 9;
 
     private static Range.Builder rangeBuilder = Range.builder();
-    private static Range originalRange = rangeBuilder.withMinimum(MINIMUM).withOptimal(OPTIMAL).withMaximum(MAXIMUM).build();
+    private static Range originalRange = rangeBuilder.withMinimum(MINIMUM).withOptimal(OPTIMAL)
+                                                     .withMaximum(MAXIMUM).build();
 
     private Weapon weapon = new Weapon(originalRange);
 
     @Test
     public void calculatesRangeWithOneUpgrade() {
         weapon.attachUpgrade(Upgrade.RANGE_ALL_PLUS_THREE);
-        Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3).withOptimal(OPTIMAL + 3).withMaximum(MAXIMUM + 3).build();
+        Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3).withOptimal(OPTIMAL + 3)
+                                          .withMaximum(MAXIMUM + 3).build();
 
         Range actualRange = weapon.getRange();
 
@@ -35,7 +37,8 @@ public class WeaponTest {
         weapon.attachUpgrade(Upgrade.RANGE_ALL_PLUS_THREE);
         weapon.attachUpgrade(Upgrade.RANGE_MINIMUM_MINUS_ONE);
         weapon.attachUpgrade(Upgrade.RANGE_MAXIMUM_PLUS_FOUR);
-        Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3 - 1).withOptimal(OPTIMAL + 3).withMaximum(MAXIMUM + 3 + 4).build();
+        Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3 - 1).withOptimal(OPTIMAL + 3)
+                                          .withMaximum(MAXIMUM + 3 + 4).build();
 
         Range actualRange = weapon.getRange();
 

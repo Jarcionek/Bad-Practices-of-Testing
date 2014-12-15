@@ -73,7 +73,8 @@ public class RefactoredMessagesSorterTest {
 
         List<Message> sortedMessages = messagesSorter.sort(unsortedMessages);
 
-        assertThat(sortedMessages, is(sameBeanAs(asList(messageOne, messageTwo, messageThree, messageFour))));
+        assertThat(sortedMessages,
+                is(sameBeanAs(asList(messageOne, messageTwo, messageThree, messageFour))));
     }
 
 }

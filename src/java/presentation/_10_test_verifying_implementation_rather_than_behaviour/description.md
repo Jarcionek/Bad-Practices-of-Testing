@@ -15,13 +15,15 @@ public class EmployeeFinderTest {
     private final Employee employeeTwo = new Employee("Two", 25_000);
     private final Employee employeeThree = new Employee("Three", 30_000);
     private final Employee employeeFour = new Employee("Four", 45_000);
-    private final List<Employee> employees = asList(employeeOne, employeeTwo, employeeThree, employeeFour);
+    private final List<Employee> employees
+                                         = asList(employeeOne, employeeTwo, employeeThree, employeeFour);
 
     private EmployeeFinder employeeFinder = new EmployeeFinder();
 
     @Test
     public void test() {
-        List<Employee> actual = employeeFinder.findEmployeesWithSalaryInRange(employees, new SalaryRange(27_000, 32_000));
+        List<Employee> actual = employeeFinder
+                .findEmployeesWithSalaryInRange(employees, new SalaryRange(27_000, 32_000));
 
         assertThat(actual, is(sameBeanAs(asList(employeeThree))));
     }
