@@ -27,6 +27,11 @@ expected exception thrown in "given" rather than in "when", using JUnit's "@Test
 
 - - - -
 
+asserting on default value returned by mocked object (and implementation making call with other parameters than mock was configured)
+- referring to 14 - asserting on default value
+
+- - - -
+
 testing the setup of the test
 - some fake service and test testing that game is disabled by calling isGameEnabled on this service
 
