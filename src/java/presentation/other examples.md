@@ -36,3 +36,15 @@ testing the setup of the test
 - some fake service and test testing that game is disabled by calling isGameEnabled on this service
 
 - - - -
+
+something with train wreck
+- like in Growing Object-Oriented Software Guided by Tests:
+```java
+((EditSaveCustomizer) master.getModelisable()
+  .getDockablePanel()
+    .getCustomizer())
+      .getSaveItem().setEnabled(Boolean.FALSE.booleanValue());
+```
+- the fix needs a change of production code, not test code, so I am not sure if it fits well to this presentation
+
+- - - -
