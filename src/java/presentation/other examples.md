@@ -1,5 +1,9 @@
 - - - -
 
+! jmock expecting method to be called but mockery not annotated with @Rule
+
+- - - -
+
 loop in the test
 
 - - - -
