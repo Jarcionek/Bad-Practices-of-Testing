@@ -19,9 +19,9 @@ public class WeaponTest {
 
     @Test
     public void calculatesRangeWithOneUpgrade() {
-        weapon.attachUpgrade(Upgrade.RANGE_ALL_PLUS_THREE);
         Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3).withOptimal(OPTIMAL + 3).withMaximum(MAXIMUM + 3).build();
 
+        weapon.attachUpgrade(Upgrade.RANGE_ALL_PLUS_THREE);
         Range actualRange = weapon.getRange();
 
         assertThat(actualRange, is(sameBeanAs(expectedRange)));
@@ -29,11 +29,11 @@ public class WeaponTest {
 
     @Test
     public void calculatesRangeWithMultipleUpgrades() {
+        Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3 - 1).withOptimal(OPTIMAL + 3).withMaximum(MAXIMUM + 3 + 4).build();
+
         weapon.attachUpgrade(Upgrade.RANGE_ALL_PLUS_THREE);
         weapon.attachUpgrade(Upgrade.RANGE_MINIMUM_MINUS_ONE);
         weapon.attachUpgrade(Upgrade.RANGE_MAXIMUM_PLUS_FOUR);
-        Range expectedRange = rangeBuilder.withMinimum(MINIMUM + 3 - 1).withOptimal(OPTIMAL + 3).withMaximum(MAXIMUM + 3 + 4).build();
-
         Range actualRange = weapon.getRange();
 
         assertThat(actualRange, is(sameBeanAs(expectedRange)));
