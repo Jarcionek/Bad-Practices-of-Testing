@@ -1,7 +1,7 @@
-package presentation._06_dependencies_between_tests.redesigned;
+package presentation._05_dependencies_between_tests.redesigned;
 
-import presentation._06_dependencies_between_tests.Event;
-import presentation._06_dependencies_between_tests.Logger;
+import presentation._05_dependencies_between_tests.Event;
+import presentation._05_dependencies_between_tests.Logger;
 
 public class EventProcessor {
 

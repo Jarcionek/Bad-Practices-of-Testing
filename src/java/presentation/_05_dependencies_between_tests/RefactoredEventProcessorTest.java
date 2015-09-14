@@ -1,25 +1,21 @@
-package presentation._06_dependencies_between_tests.redesigned;
+package presentation._05_dependencies_between_tests;
 
 import org.junit.Test;
-import presentation._06_dependencies_between_tests.Event;
-import presentation._06_dependencies_between_tests.Logger;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
-public class EventProcessorTest {
+public class RefactoredEventProcessorTest {
 
     private final Logger logger = mock(Logger.class);
-    private final Properties properties = mock(Properties.class);
 
-    private final EventProcessor eventProcessor = new EventProcessor(logger, properties);
+    private final EventProcessor eventProcessor = new EventProcessor(logger);
 
     @Test
     public void doesNotLogEventIfDebugIsOff() {
-        when(properties.getProperty("debug")).thenReturn("disabled");
+        System.setProperty("debug", "disabled");
 
         eventProcessor.process(new Event("eventText"));
 
@@ -28,7 +24,7 @@ public class EventProcessorTest {
 
     @Test
     public void logsEventIfDebugIsOn() {
-        when(properties.getProperty("debug")).thenReturn("enabled");
+        System.setProperty("debug", "enabled");
 
         eventProcessor.process(new Event("eventText"));
 

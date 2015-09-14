@@ -1,4 +1,4 @@
-package presentation._06_dependencies_between_tests;
+package presentation._05_dependencies_between_tests;
 
 import org.junit.Test;
 

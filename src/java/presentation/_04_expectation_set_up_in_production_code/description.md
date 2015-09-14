@@ -82,4 +82,4 @@ public void doesNotAcceptInvalidAction() {
 ```
 
 
-#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_06_dependencies_between_tests/description.md)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_05_dependencies_between_tests/description.md)
