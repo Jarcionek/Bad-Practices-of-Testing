@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class RefactoredMessagesSorterTest {
 
-    private MessagesSorter messagesSorter = new MessagesSorter();
+    private final MessagesSorter messagesSorter = new MessagesSorter();
 
     @Test
     public void sortsMessagesByTimestampThenBySenderThenByReceiver() {

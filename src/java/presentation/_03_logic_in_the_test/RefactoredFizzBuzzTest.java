@@ -25,7 +25,7 @@ public class RefactoredFizzBuzzTest {
     }
 
     @Test
-    public void returnsTheNumberForNumbersNotDivisbleByThreeNorFive() {
+    public void returnsTheNumberForNumbersNotDivisibleByThreeNorFive() {
         assertThat(fizzBuzz(4), is(equalTo("4")));
     }
 

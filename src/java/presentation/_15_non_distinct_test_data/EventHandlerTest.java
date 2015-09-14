@@ -11,10 +11,10 @@ public class EventHandlerTest {
     private static final int APP_ID = 123456;
     private static final int USER_ID = 123456;
 
-    private AppActivityReporter appActivityReporter = mock(AppActivityReporter.class);
-    private UserActivityReporter userActivityReporter = mock(UserActivityReporter.class);
+    private final AppActivityReporter appActivityReporter = mock(AppActivityReporter.class);
+    private final UserActivityReporter userActivityReporter = mock(UserActivityReporter.class);
 
-    private EventHandler eventHandler = new EventHandler(appActivityReporter, userActivityReporter);
+    private final EventHandler eventHandler = new EventHandler(appActivityReporter, userActivityReporter);
 
     @Test
     public void reportsAppUsage() {

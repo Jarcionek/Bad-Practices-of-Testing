@@ -11,10 +11,10 @@ public class StatisticsGeneratorTest {
 
     private static final int NUMBER_OF_BOOKED_AND_NOT_USED_SEATS = 0;
 
-    private FlightManager flightManager = mock(FlightManager.class);
-    private DbStatisticsProxy dbStatisticsProxy = mock(DbStatisticsProxy.class);
+    private final FlightManager flightManager = mock(FlightManager.class);
+    private final DbStatisticsProxy dbStatisticsProxy = mock(DbStatisticsProxy.class);
 
-    private StatisticsGenerator statisticsGenerator = new StatisticsGenerator(flightManager, dbStatisticsProxy);
+    private final StatisticsGenerator statisticsGenerator = new StatisticsGenerator(flightManager, dbStatisticsProxy);
 
     @Test
     public void savesTheNumberOfCustomersWhoMissedTheirFlight() {

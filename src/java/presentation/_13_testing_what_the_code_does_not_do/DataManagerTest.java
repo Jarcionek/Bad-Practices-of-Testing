@@ -8,9 +8,9 @@ import static org.mockito.Mockito.when;
 
 public class DataManagerTest {
 
-    private DataSorter dataSorter = mock(DataSorter.class);
+    private final DataSorter dataSorter = mock(DataSorter.class);
 
-    private DataManager dataManager = new DataManager(dataSorter);
+    private final DataManager dataManager = new DataManager(dataSorter);
 
     @Test(expected = DataSorterException.class)
     public void testDataSorterException() {

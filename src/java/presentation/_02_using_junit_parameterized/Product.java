@@ -1,7 +1,5 @@
 package presentation._02_using_junit_parameterized;
 
-import java.math.BigDecimal;
-
 public class Product {
 
     private final String name;

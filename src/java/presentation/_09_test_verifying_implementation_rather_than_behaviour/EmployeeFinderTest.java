@@ -18,7 +18,7 @@ public class EmployeeFinderTest {
     private final Employee employeeFour = new Employee("Four", 45_000);
     private final List<Employee> employees = asList(employeeOne, employeeTwo, employeeThree, employeeFour);
 
-    private EmployeeFinder employeeFinder = new EmployeeFinder();
+    private final EmployeeFinder employeeFinder = new EmployeeFinder();
 
     @Test
     public void test() {
