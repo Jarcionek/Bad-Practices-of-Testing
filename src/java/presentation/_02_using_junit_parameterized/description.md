@@ -54,7 +54,7 @@ But this is not the only problem. What diagnostics will this test give?
 
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/02-before-intellij.png)
 
-There is absolutely nothing that could explain why the third test failed. Also you have to count the test parameters to find what input it was. Although it is not a problem with only 3 test parameters, it may get more difficult with 10 or more.
+There is absolutely nothing that could explain why the third test failed - you cannot even see what the actual value was. Also you have to count the test parameters to find what input it was. Although it is not a problem with only 3 test parameters, it may get more difficult with 10 or more.
 
 Final problem of junit parameterized test is that it is not possible to debug easily. You cannot just run a chosen test, you have to run them all. So the best you can do is use conditional breakpoints, but this involves a lot of manual work if other test starts failing or if you have multiple breakpoints (as you have to either set all of them to be conditional or disable them temporary).
 
@@ -98,7 +98,7 @@ This will give the following diagnostics:
 
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/02-after-intellij.png)
 
-Further improvement of diagnostics is to use hamcrest and its ```assertThat``` or at least ```assertEquals``` to get a ```ComparisonFailure``` rather than ```AssertionError```. Use ```assertTrue``` and ```assertFalse``` only for asserting on boolean values and always add a meaningful message - "java.lang.AssertionError: false" is not helpful whne the test fails.
+Further improvement of diagnostics is to use hamcrest and its ```assertThat``` or at least ```assertEquals``` to get a ```ComparisonFailure``` rather than ```AssertionError```. I would not use ```assertTrue``` even for asserting on boolean values, as it does not clearly say what was expected and what was actual. The message will be something like ```java.lang.AssertionError: false``` and it is not helpful when the test fails so you might consider also adding a meaningful message to your assertion.
 
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_04_logic_in_the_test/description.md)
