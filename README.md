@@ -1,7 +1,11 @@
 Bad Practices of Testing
 ========================
 
-Presentation showing bad test cost and how to improve it.
+Presentation showing bad test code and how to improve it.
+
+All examples come from real commercial projects and caused development team smaller or bigger problems.
+
+No code has been taken from these projects. All code shown has been written from scratch using completely different (made-up) domain in order to show only the smallest necessary snippet of code.
 
 [Click to start reading](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_01_meaningless_tests_names/description.md)
 
