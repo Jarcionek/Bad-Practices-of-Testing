@@ -16,7 +16,7 @@ Presentation showing bad test cost and how to improve it.
 0. [Multiple assert statements to verify a list](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_asserting_on_the_elements_of_the_list/description.md)
 0. [Fake not meeting the contract of the interface it is implementing](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_fake_not_meeting_the_contract_of_the_interface/description.md)
 0. [Testing implementation instead of behaviour](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_09_test_verifying_implementation_rather_than_behaviour/description.md)
-0. [Never thrown exception](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_10_never_thrown_exception/description.md)
+0. [Asserting on exception's message](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_10_asserting_on_exception_message/description.md)
 0. [Swallowing assertion error](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_11_swallowing_assertion_error/description.md)
 0. [Mocking data objects](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_12_mocking_data_objects/description.md)
 0. [Testing what the code does not do](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_13_testing_what_the_code_does_not_do/description.md)

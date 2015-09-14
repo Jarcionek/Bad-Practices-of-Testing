@@ -1,4 +1,4 @@
-package presentation._10_never_thrown_exception;
+package presentation._10_asserting_on_exception_message;
 
 import java.util.stream.DoubleStream;
 
