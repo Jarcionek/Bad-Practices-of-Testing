@@ -68,9 +68,9 @@ public class EmployeeFinder {
 
 ### Problem:
 
-Firstly, test code in production - increasing the access of the method or annotating a method with ```@VisibleForTesting``` only for the purpose of testing is a test code. Code which is used only in tests is actually unused and should be deleted - the less code to maintain the better.
+Firstly, test code in production - increasing the access of the method or annotating a method with `@VisibleForTesting` only for the purpose of testing is a test code. Code which is used only in tests is actually unused and should be deleted - the less code to maintain the better.
 
-Secondly, there is no guarantee that the actual method under test (```findEmployeesWithSalaryInRange```) is using method ```employeeHasSalaryInRange```. If I inlined the method and accidentally changed the sign from ```<=``` to ```<```, no test would fail:
+Secondly, there is no guarantee that the actual method under test (`findEmployeesWithSalaryInRange`) is using method `employeeHasSalaryInRange`. If I inlined the method and accidentally changed the sign from `<=` to `<`, no test would fail:
 
 ```java
 public class EmployeeFinder {
@@ -93,16 +93,16 @@ public class EmployeeFinder {
 }
 ```
 
-Thirdly, two tests for method ```employeeHasSalaryInRange``` always expect the same output. The simplest implementation is to always return true in this method.
+Thirdly, two tests for method `employeeHasSalaryInRange` always expect the same output. The simplest implementation is to always return true in this method.
 
 Finally the tests names are not meaningful.
 
-Many of these problems were caused by the fact that this implementation was not test driven. Developer first wrote a method ```employeeHasSalaryInRange``` and then used it in the main "find" method.
+Many of these problems were caused by the fact that this implementation was not test driven. Developer first wrote a method `employeeHasSalaryInRange` and then used it in the main "find" method.
 
 
 ### Solution:
 
-Test behaviour, not implementation. All tests should be calling only method ```findEmployeesWithSalaryInRange```. Whether this method has logic extracted to private method, is using static methods from some other class or is using third party libraries, is not relevant. The method is supposed to return employees with salary in requested range, no matter how.
+Test behaviour, not implementation. All tests should be calling only method `findEmployeesWithSalaryInRange`. Whether this method has logic extracted to private method, is using static methods from some other class or is using third party libraries, is not relevant. The method is supposed to return employees with salary in requested range, no matter how.
 
 If a piece of logic is so large that you need to extract it to a method and test is separately, extract it to another class and make it dependency of this class - you will be able to mock it and not care about what it does, because it has its own unit tests.
 

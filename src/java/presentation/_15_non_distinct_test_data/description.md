@@ -3,7 +3,7 @@
 
 ### Domain:
 
-A large system has multiple applications available to access it - web interface, mobile app, stand alone installation etc. Each installation has an unique application id, which means that single user can be interacting with the system having one of a few different app ids. To make targeted promotions the marketing department wants to know how often users are using the system and what apps are most commonly used. ```EventHandler``` receives incoming user request (event), reports the activity and does some event processing.
+A large system has multiple applications available to access it - web interface, mobile app, stand alone installation etc. Each installation has an unique application id, which means that single user can be interacting with the system having one of a few different app ids. To make targeted promotions the marketing department wants to know how often users are using the system and what apps are most commonly used. `EventHandler` receives incoming user request (event), reports the activity and does some event processing.
 
 
 ### Test code:
@@ -41,7 +41,7 @@ public class EventHandlerTest {
 
 Even when test driving the implementation and writing only the minimal implementation necessary to make the test green you may produce a correct implementation. One of the common mutations applied by mutation testing (see notes below) is swapping the usage of variables/parameters/fields which have the same type. And because both app id and user id are equal, the tests would not fail if you accidentally introduced such bug.
 
-Also in this case you may consider to verify that there were no other interactions with ```appActivityReporter``` and ```userActivityReporter```.
+Also in this case you may consider to verify that there were no other interactions with `appActivityReporter` and `userActivityReporter`.
 
 
 ### Solution:

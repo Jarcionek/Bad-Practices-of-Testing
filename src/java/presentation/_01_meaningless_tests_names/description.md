@@ -3,7 +3,7 @@
 
 ### Domain:
 
-User news feed contains of messages which are made of timestamps and text. The mobile application that displays it rarely needs more than last 50 messages so it queries for needed pages - e.g. most recent 50 messages is page of size 50 and page number 0, next 50 messages is page size 50 and page number 1. Paginator is a class that retrieves entire user news feed with messages sorted by timestamp and returns requested page only. Note that news feed is sorted by timestamp in ascending order while page number go in the opposite order - so if entire news feed is ```[A, B, C, D, E]```, page number 0 of size 3 is ```[C, D, E]``` and page number 1 of size 3 is ```[A, B]```.
+User news feed contains of messages which are made of timestamps and text. The mobile application that displays it rarely needs more than last 50 messages so it queries for needed pages - e.g. most recent 50 messages is page of size 50 and page number 0, next 50 messages is page size 50 and page number 1. Paginator is a class that retrieves entire user news feed with messages sorted by timestamp and returns requested page only. Note that news feed is sorted by timestamp in ascending order while page number go in the opposite order - so if entire news feed is `[A, B, C, D, E]`, page number 0 of size 3 is `[C, D, E]` and page number 1 of size 3 is `[A, B]`.
 
 
 ### Test code:

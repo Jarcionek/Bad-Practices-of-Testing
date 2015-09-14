@@ -50,7 +50,7 @@ Also, writing all these assertions is large boiler plate. It's error prone (e.g.
 
 ### Solution:
 
-Use a tool which serialises two objects to xml/json and does string comparison on them, such as ```sameBeanAs``` from [shazamcrest](https://github.com/shazam/shazamcrest):
+Use a tool which serialises two objects to xml/json and does string comparison on them, such as `sameBeanAs` from [shazamcrest](https://github.com/shazam/shazamcrest):
 
 ```java
 public class RefactoredMessagesSorterTest {

@@ -31,7 +31,7 @@ public class EmployeesManagerTest {
 
 ### Problem:
 
-Employee is a data object, we don’t write tests for getters/setters, we usually test data objects indirectly. However, if ```Employee``` class looks like this:
+Employee is a data object, we don’t write tests for getters/setters, we usually test data objects indirectly. However, if `Employee` class looks like this:
 
 ```java
 public class Employee {
@@ -49,14 +49,14 @@ public class Employee {
 
 This test will be green. If there is no other test using Employee class, you will have failing acceptance test and it may be difficult to figure out what the problem is. Unless you want to write tests getters and setters.
 
-Another problem here is that salary is expressed using doubles which cannot precisely represent certain values. E.g. ```5.6 + 5.8``` will give ```11.399999999``` - if expected value was 11.4, the test would be failing.
+Another problem here is that salary is expressed using doubles which cannot precisely represent certain values. E.g. `5.6 + 5.8` will give `11.399999999` - if expected value was 11.4, the test would be failing.
 
 
 ### Solution:
 
 Never mock data objects. Mock only methods that have unit tests.
 
-Use ```BigDecimal``` for floating point numbers when exact precision is needed.
+Use `BigDecimal` for floating point numbers when exact precision is needed.
 
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_13_testing_what_the_code_does_not_do/description.md)

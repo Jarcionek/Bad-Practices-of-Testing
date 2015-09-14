@@ -3,7 +3,7 @@
 
 ### Domain:
 
-In the web application a lot of user's choices are saved to the database. For example, if user resizes the main panel, the next time they open an application the panel will have exactly the same sizes. ```UserSettingsDbSaver``` is a class that saves data to the SQL database, while ```UserSettingsService``` is a class sitting between HTTP endpoint and ```UserSettingsDbSaver```. 
+In the web application a lot of user's choices are saved to the database. For example, if user resizes the main panel, the next time they open an application the panel will have exactly the same sizes. `UserSettingsDbSaver` is a class that saves data to the SQL database, while `UserSettingsService` is a class sitting between HTTP endpoint and `UserSettingsDbSaver`. 
 
 
 ### Test code:
@@ -38,7 +38,7 @@ public class UserSettingsServiceTest {
 
 This test never fails. This is because JMock expectations are set up before the call are not checked after the call was made.
 
-Another minor problem (but it is really a matter of preference) is extra setup required by JMock. By default it cannot mock classes, ```setImposteriser(ClassImposteriser.INSTANCE)``` is required which in turn requires maven dependency on ```jmock-legacy```.
+Another minor problem (but it is really a matter of preference) is extra setup required by JMock. By default it cannot mock classes, `setImposteriser(ClassImposteriser.INSTANCE)` is required which in turn requires maven dependency on `jmock-legacy`.
 
 
 ### Solution:
@@ -52,7 +52,7 @@ public final JUnitRuleMockery mockery = new JUnitRuleMockery() {{
 }};
 ```
 
-Class ```JUnitRuleMockery``` is defined in ```jmock-junit4``` dependency so also a change to the pom file is required.
+Class `JUnitRuleMockery` is defined in `jmock-junit4` dependency so also a change to the pom file is required.
 
 With Mockito, no extra setup/dependencies are necessary and the test can be written in gwen style (given-when-then):
 
