@@ -79,4 +79,4 @@ public class FakeUuidProvider implements UuidProvider {
 Some classes (like `UuidProvider`) cannot be stubbed.
 
 
-#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_10_test_verifying_implementation_rather_than_behaviour/description.md)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_09_test_verifying_implementation_rather_than_behaviour/description.md)

@@ -1,4 +1,4 @@
-package presentation._10_test_verifying_implementation_rather_than_behaviour;
+package presentation._09_test_verifying_implementation_rather_than_behaviour;
 
 import com.google.common.annotations.VisibleForTesting;
 
