@@ -10,7 +10,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class MessagesSorterTest {
 
-    private MessagesSorter messagesSorter = new MessagesSorter();
+    private final MessagesSorter messagesSorter = new MessagesSorter();
 
     @Test
     public void sortsMessagesByTimestampThenBySenderThenByReceiver() {
@@ -31,7 +31,6 @@ public class MessagesSorterTest {
         assertEquals(100, sortedMessages.get(1).getTimestamp());
         assertEquals("Benjamin", sortedMessages.get(1).getSender());
         assertEquals("Oliver", sortedMessages.get(1).getReceiver());
-        assertEquals(4, sortedMessages.size());
         assertEquals(250, sortedMessages.get(2).getTimestamp());
         assertEquals("John", sortedMessages.get(2).getSender());
         assertEquals("George", sortedMessages.get(2).getReceiver());
