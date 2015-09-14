@@ -24,6 +24,7 @@ public class MessagesSorterTest {
         List<Message> sortedMessages = messagesSorter.sort(unsortedMessages);
 
         assertNotNull(sortedMessages);
+        assertEquals(4, sortedMessages.size());
         assertEquals(100, sortedMessages.get(0).getTimestamp());
         assertEquals("Anthony", sortedMessages.get(0).getSender());
         assertEquals("Samuel", sortedMessages.get(0).getReceiver());
