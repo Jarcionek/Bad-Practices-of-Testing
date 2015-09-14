@@ -30,7 +30,7 @@ public class JsonLoggingExceptionMapperTest {
     private final ExceptionLogger exceptionLogger = mock(ExceptionLogger.class);
 
     private final JsonLoggingExceptionMapper jsonLoggingExceptionMapper
-                                    = new JsonLoggingExceptionMapper(uuidProvider, exceptionLogger);
+                                         = new JsonLoggingExceptionMapper(uuidProvider, exceptionLogger);
 
     @Test
     public void logsSuppressedExceptionsWithDifferentIds() {
