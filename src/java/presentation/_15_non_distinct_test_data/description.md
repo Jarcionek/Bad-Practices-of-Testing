@@ -51,5 +51,5 @@ Extra tools (e.g. mutation testing framework) can help detect problems, but in t
 Mutation testing - the production code is mutated (changed) and the tests are run. If all tests are green it means that nothing detected the change. This in turn means that introduced changed is irrelevant (fine) or the tests are of bad quality (not fine). If some tests have failed it means that they detected the change and you are protected against introducing such bug.
 
 
-#### [Back to main page](https://github.com/Jarcionek/Bad-Practices-of-Testing)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_16_jmock_verifying_method_was_called/description.md)
 

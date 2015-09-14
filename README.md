@@ -21,3 +21,4 @@ Presentation showing bad test cost and how to improve it.
 0. [Testing what the code does not do](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_13_testing_what_the_code_does_not_do/description.md)
 0. [Asserting on default value](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_14_asserting_on_default_value/description.md)
 0. [Non distinct test data](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_15_non_distinct_test_data/description.md)
+0. [JMock verifying method was called](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_16_jmock_verifying_method_was_called/description.md)
