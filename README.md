@@ -10,7 +10,7 @@ Presentation showing bad test cost and how to improve it.
 0. [Meaningless tests names](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_01_meaningless_tests_names/description.md)
 0. [Using JUnit Parameterized](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_02_using_junit_parameterized/description.md)
 0. [Logic in the test](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_03_logic_in_the_test/description.md)
-0. [Test's expectations set up in production code](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_05_expectation_set_up_in_production_code/description.md)
+0. [Test's expectations set up in production code](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_04_expectation_set_up_in_production_code/description.md)
 0. [Dependencies between tests](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_06_dependencies_between_tests/description.md)
 0. [Non thread-safe unit tests](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_non_thread_safe_tests/description.md)
 0. [Multiple assert statements to verify a list](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/description.md)
