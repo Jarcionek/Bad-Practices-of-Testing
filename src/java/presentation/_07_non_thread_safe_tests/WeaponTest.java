@@ -15,7 +15,7 @@ public class WeaponTest {
     private static Range.Builder rangeBuilder = Range.builder();
     private static Range originalRange = rangeBuilder.withMinimum(MINIMUM).withOptimal(OPTIMAL).withMaximum(MAXIMUM).build();
 
-    private Weapon weapon = new Weapon(originalRange);
+    private final Weapon weapon = new Weapon(originalRange);
 
     @Test
     public void calculatesRangeWithOneUpgrade() {
