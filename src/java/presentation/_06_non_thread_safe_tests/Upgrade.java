@@ -1,4 +1,4 @@
-package presentation._07_non_thread_safe_tests;
+package presentation._06_non_thread_safe_tests;
 
 public enum Upgrade {
 

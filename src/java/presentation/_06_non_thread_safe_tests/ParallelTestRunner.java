@@ -1,4 +1,4 @@
-package presentation._07_non_thread_safe_tests;
+package presentation._06_non_thread_safe_tests;
 
 import org.junit.Test;
 
@@ -50,8 +50,8 @@ public class ParallelTestRunner {
         //at com.shazam.shazamcrest.ResultComparison.containsComparableJson(ResultComparison.java:33)
         //at com.shazam.shazamcrest.MatcherAssert.assertThat(MatcherAssert.java:48)
         //at com.shazam.shazamcrest.MatcherAssert.assertThat(MatcherAssert.java:29)
-        //at presentation._07_non_thread_safe_tests.WeaponTest.calculatesRangeWithMultipleUpgrades(WeaponTest.java:39)
-        //at presentation._07_non_thread_safe_tests.ParallelTestRunner$2.run(ParallelTestRunner.java:23)
+        //at presentation._06_non_thread_safe_tests.WeaponTest.calculatesRangeWithMultipleUpgrades(WeaponTest.java:39)
+        //at presentation._06_non_thread_safe_tests.ParallelTestRunner$2.run(ParallelTestRunner.java:23)
     }
 
 }
