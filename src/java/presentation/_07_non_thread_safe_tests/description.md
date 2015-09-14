@@ -51,7 +51,7 @@ public class WeaponTest {
 
 ### Problem:
 
-The implementation is correct, the tests are correct as well and they are passing. But depending on the setup in which the tests are running, they may be randomly passing. There is a minor setup flaw which will cause problems if tests are run in parallel. The builder declared is a mutable object - it is static and shared between tests. If both tests call ```withMinimum``` at the same time, the second test will override whatever the first test has done, causing the first test to fail. If your Continuous Integration System is running tests in parallel but local set up does not, the issue will be impossible to reproduce locally and may be very difficult to diagnose.
+The implementation is correct, the tests are correct as well and they are passing. But depending on the setup in which the tests are running, they may be randomly failing. There is a minor setup flaw which will cause problems if tests are run in parallel. The builder declared is a mutable object - it is static and shared between tests. If both tests call ```withMinimum``` at the same time, the second test will override whatever the first test has done, causing the first test to fail. If your Continuous Integration System is running tests in parallel but local set up does not, the issue will be impossible to reproduce locally and may be very difficult to identify.
 
 
 ### Solution:
