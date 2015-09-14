@@ -7,7 +7,7 @@ All examples come from real commercial projects and caused development team smal
 
 No code has been taken from these projects. All code shown has been written from scratch using completely different (made-up) domain in order to show only the smallest necessary snippet of code.
 
-[Click to start reading](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_01_meaningless_tests_names/description.md)
+[Click to start reading](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_01_meaningless_tests_names/description.md), or if you prefer to try yourself, [this repository](https://github.com/Jarcionek/Bad-Practices-of-Testing-DIY) contains all the code without solutions.
 
 ### Table of contents
 
