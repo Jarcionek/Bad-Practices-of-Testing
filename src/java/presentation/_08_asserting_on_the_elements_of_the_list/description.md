@@ -45,7 +45,7 @@ Diagnostics. They are completely meaningless. Having seen a test fail you need t
 
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/before-console.png)
 
-Also, writing all these assertions is large boiler plate. It's error prone (e.g. index) and contains a lot of duplication.
+Also, writing all these assertions is large boiler plate. It is error prone (e.g. index) and contains a lot of duplication.
 
 
 ### Solution:

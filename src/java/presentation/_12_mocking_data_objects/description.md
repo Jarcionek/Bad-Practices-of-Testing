@@ -31,7 +31,7 @@ public class EmployeesManagerTest {
 
 ### Problem:
 
-Employee is a data object, we don’t write tests for getters/setters, we usually test data objects indirectly. However, if `Employee` class looks like this:
+Employee is a data object, we do not write tests for getters/setters, we usually test data objects indirectly. However, if `Employee` class looks like this:
 
 ```java
 public class Employee {
