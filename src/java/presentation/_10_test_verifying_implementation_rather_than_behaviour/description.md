@@ -3,7 +3,7 @@
 
 ### Domain:
 
-HR in large corporation needs some tools to filter employees based on different criteria such as salary range. This is a class for finding employees with other "find" methods (and their tests) removed.
+HR in large corporation needs some tools to filter employees based on different criteria such as salary range. This is a class for finding employees with other `find` methods (and their tests) removed.
 
 
 ### Test Code:
@@ -37,6 +37,8 @@ public class EmployeeFinderTest {
     public void testLowerThanMaximum() {
         assertTrue(employeeFinder.employeeHasSalaryInRange(employeeThree, new SalaryRange(10_000, 30_000)));
     }
+    
+    // other tests
 
 }
 ```
@@ -61,6 +63,8 @@ public class EmployeeFinder {
     public boolean employeeHasSalaryInRange(Employee employee, SalaryRange range) {
         return employee.getSalary() >= range.getMin() && employee.getSalary() <= range.getMax();
     }
+
+    // other "find" methods
 
 }
 ```
@@ -90,6 +94,8 @@ public class EmployeeFinder {
         return employee.getSalary() >= range.getMin() && employee.getSalary() <= range.getMax();
     }
 
+    // other "find" methods
+
 }
 ```
 
@@ -97,7 +103,7 @@ Thirdly, two tests for method `employeeHasSalaryInRange` always expect the same 
 
 Finally the tests names are not meaningful.
 
-Many of these problems were caused by the fact that this implementation was not test driven. Developer first wrote a method `employeeHasSalaryInRange` and then used it in the main "find" method.
+Many of these problems were caused by the fact that this implementation was not test driven. Developer first wrote a method `employeeHasSalaryInRange` and then used it in the main `find` method.
 
 
 ### Solution:

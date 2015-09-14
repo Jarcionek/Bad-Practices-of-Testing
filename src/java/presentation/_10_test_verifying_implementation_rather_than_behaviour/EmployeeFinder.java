@@ -22,4 +22,6 @@ public class EmployeeFinder {
         return employee.getSalary() >= range.getMin() && employee.getSalary() <= range.getMax();
     }
 
+    // other "find" methods
+
 }

@@ -37,4 +37,6 @@ public class EmployeeFinderTest {
         assertTrue(employeeFinder.employeeHasSalaryInRange(employeeThree, new SalaryRange(10_000, 30_000)));
     }
 
+    // other tests
+
 }

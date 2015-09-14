@@ -33,4 +33,6 @@ public class RefactoredEmployeeFinderTest {
         assertThat(actual, is(sameBeanAs(asList(employeeOne, employeeTwo, employeeThree))));
     }
 
+    // other tests
+
 }
