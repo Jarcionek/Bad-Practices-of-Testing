@@ -1,9 +1,9 @@
-package presentation._04_logic_in_the_test;
+package presentation._03_logic_in_the_test;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static presentation._04_logic_in_the_test.FizzBuzz.fizzBuzz;
+import static presentation._03_logic_in_the_test.FizzBuzz.fizzBuzz;
 
 public class FizzBuzzTest {
 

@@ -1,11 +1,11 @@
-package presentation._04_logic_in_the_test;
+package presentation._03_logic_in_the_test;
 
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static presentation._04_logic_in_the_test.FizzBuzz.fizzBuzz;
+import static presentation._03_logic_in_the_test.FizzBuzz.fizzBuzz;
 
 public class RefactoredFizzBuzzTest {
 

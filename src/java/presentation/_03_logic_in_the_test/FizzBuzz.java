@@ -1,4 +1,4 @@
-package presentation._04_logic_in_the_test;
+package presentation._03_logic_in_the_test;
 
 public class FizzBuzz {
 

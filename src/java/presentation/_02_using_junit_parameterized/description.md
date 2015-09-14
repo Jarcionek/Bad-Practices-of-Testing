@@ -101,4 +101,4 @@ This will give the following diagnostics:
 Further improvement of diagnostics is to use hamcrest and its `assertThat` or at least `assertEquals` to get a `ComparisonFailure` rather than `AssertionError`. I would not use `assertTrue` even for asserting on boolean values, as it does not clearly say what was expected and what was actual. The message will be something like `java.lang.AssertionError: false` and it is not helpful when the test fails so you might consider also adding a meaningful message to your assertion.
 
 
-#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_04_logic_in_the_test/description.md)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_03_logic_in_the_test/description.md)
