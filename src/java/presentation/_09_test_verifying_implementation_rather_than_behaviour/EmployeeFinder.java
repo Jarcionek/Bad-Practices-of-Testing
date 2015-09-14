@@ -2,19 +2,16 @@ package presentation._09_test_verifying_implementation_rather_than_behaviour;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 public class EmployeeFinder {
 
     public List<Employee> findEmployeesWithSalaryInRange(List<Employee> employeesToSearch, SalaryRange range) {
-        List<Employee> foundEmployees = new ArrayList<>();
-        for (Employee employee : employeesToSearch) {
-            if (employee.getSalary() >= range.getMin() && employee.getSalary() < range.getMax()) {
-                foundEmployees.add(employee);
-            }
-        }
-        return foundEmployees;
+        return employeesToSearch.stream()
+                .filter(employee -> employeeHasSalaryInRange(employee, range))
+                .collect(toList());
     }
 
     @VisibleForTesting

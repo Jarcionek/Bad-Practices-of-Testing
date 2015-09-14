@@ -6,14 +6,14 @@ import static org.junit.Assert.fail;
 
 public class Refactored_1_CacheTest {
 
-    private final String request = "abc-123";
+    private static final String REQUEST = "abc-123";
 
     private final Cache cache = new Cache();
 
     @Test
     public void throwsDbErrorWhenValueIsNotCachedAndDbIsDown() {
         try {
-            cache.fetch(request);
+            cache.fetch(REQUEST);
         } catch (DbError expected) {
             return;
         }
