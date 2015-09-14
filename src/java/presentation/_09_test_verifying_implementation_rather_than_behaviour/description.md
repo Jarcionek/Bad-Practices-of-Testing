@@ -113,4 +113,4 @@ Test behaviour, not implementation. All tests should be calling only method `fin
 If a piece of logic is so large that you need to extract it to a method and test is separately, extract it to another class and make it dependency of this class - you will be able to mock it and not care about what it does, because it has its own unit tests.
 
 
-#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_11_swallowing_assertion_error/description.md)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_10_never_thrown_exception/description.md)

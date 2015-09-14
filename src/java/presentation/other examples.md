@@ -12,11 +12,6 @@ test AaaTest testing object Bbb
 
 - - - -
 
-no assertion (i.e. incorrect one, always passing test)
-- asserting on error message of an exception without fail statement
-
-- - - -
-
 expected exception thrown in "given" rather than in "when", using JUnit's "@Test(expected=...)"
 - referring to 11 - swallowing assertion error
 
