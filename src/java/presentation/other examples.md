@@ -1,8 +1,4 @@
 
-loop in the test
-
-- - - -
-
 asserting multiple things (assert return value and verify notifier call)
 
 - - - -
