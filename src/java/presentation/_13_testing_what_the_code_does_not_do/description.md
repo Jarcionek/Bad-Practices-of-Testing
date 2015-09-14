@@ -35,7 +35,7 @@ Useless test, delete it.
 
 ### Notes:
 
-However, if there is another requirement (another test) saying that some exceptions should be swallowed, but you don’t want to have DataSorterException swallowed, you may want to leave this test. You should definitely rename it to e.g. “does not swallow DataSorterException”.
+However, if there is another requirement (another test) saying that some exceptions should be swallowed, but you don’t want to have `DataSorterException` swallowed, you should leave this test. You should definitely rename it to e.g. `does not swallow DataSorterException`.
 
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_14_asserting_on_default_value/description.md)
