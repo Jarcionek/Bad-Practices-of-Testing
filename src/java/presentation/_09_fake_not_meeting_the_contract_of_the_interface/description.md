@@ -3,7 +3,7 @@
 
 ### Domain:
 
-The system polls events from the queue and calls ```EventsReceiver``` with a bulk of events. ```EventsReceiver``` attaches some metadata to the events, logs the events etc. before passing them one by one to ```EventsProcessor```. Bulks of events are guaranteed to be smaller than 1000 and it is required that each event in the same bulk has a unique identifier that allows to distinguish it from others in the bulk (```EventProcessor``` will be then called with event and string uuid parameters). Bulks can be identified by other metadata attached to the event, which is not relevant and hence not shown in the code.
+`JsonLoggingExceptionMapper` is a class that converts exception thrown anywhere in the code into HTTP response to be returned by the server. In our case it also logs the exceptions - each with different id.
 
 
 ### Production code:
@@ -24,24 +24,28 @@ public interface UuidProvider {
 ### Test code:
 
 ```java
-public class EventsReceiverTest {
+public class JsonLoggingExceptionMapperTest {
 
-    private EventProcessor eventProcessor = mock(EventProcessor.class);
-    private UuidProvider uuidProvider = new FakeUuidProvider();
+    private final UuidProvider uuidProvider = new FakeUuidProvider();
+    private final ExceptionLogger exceptionLogger = mock(ExceptionLogger.class);
 
-    private EventsReceiver eventsReceiver = new EventsReceiver(eventProcessor, uuidProvider);
+    private final JsonLoggingExceptionMapper jsonLoggingExceptionMapper
+                                    = new JsonLoggingExceptionMapper(uuidProvider, exceptionLogger);
 
     @Test
-    public void reportsEventsWithDifferentUuids() {
-        Event eventOne = new Event("eventNameOne");
-        Event eventTwo = new Event("eventNameTwo");
+    public void logsSuppressedExceptionsWithDifferentIds() {
+        RuntimeException exception = new RuntimeException();
+        Throwable suppressedExceptionOne = new IllegalArgumentException();
+        Throwable suppressedExceptionTwo = new IllegalStateException();
+        exception.addSuppressed(suppressedExceptionOne);
+        exception.addSuppressed(suppressedExceptionTwo);
 
-        eventsReceiver.process(eventOne, eventTwo);
+        jsonLoggingExceptionMapper.toResponse(exception);
 
-        verify(eventProcessor, times(1)).process(eventOne, "12345");
-        verify(eventProcessor, times(1)).process(eventTwo, "12345");
+        verify(exceptionLogger, times(1)).log("12345", suppressedExceptionOne);
+        verify(exceptionLogger, times(1)).log("12345", suppressedExceptionTwo);
     }
-
+    
     // other tests
 
 }
@@ -50,9 +54,9 @@ public class EventsReceiverTest {
 
 ### Problem:
 
-Although the name of the test clearly says what it is supposed to test, it does not test it at all. ```FakeUuidProvider``` does not meet the contract of the interface it is implementing, it behaves differently than the real ```UuidProvider``` behaves. The minimal implementation to make this test pass is to get only one UUID and report all events against this single value.
+Although the name of the test clearly says what it is supposed to test, it does not test it at all. `FakeUuidProvider` does not meet the contract of the interface it is implementing, it behaves differently than the real `UuidProvider` behaves. The minimal implementation to make this test pass is to get only one UUID and log all exceptions with this single value.
 
-Another minor problem is lack of verification that there were no other interactions with ```eventsProcessor```. If implementation was also processing these events with other uuids (resulting in processing some events multiple times), this test would be still green.
+Another minor problem is lack of verification that there were no other interactions with `exceptionLogger`. If implementation was also logging the actual exception, this test would be still green.
 
 
 ### Solution:
@@ -72,7 +76,7 @@ public class FakeUuidProvider implements UuidProvider {
 }
 ```
 
-Some classes (like ```UuidProvider```) cannot be stubbed.
+Some classes (like `UuidProvider`) cannot be stubbed.
 
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_10_test_verifying_implementation_rather_than_behaviour/description.md)
