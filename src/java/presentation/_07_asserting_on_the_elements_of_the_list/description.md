@@ -43,7 +43,7 @@ public class MessagesSorterTest {
 
 Diagnostics. They are completely meaningless. Having seen a test fail you need to go to the test to check on which line it failed, because message will not tell you this. If you already know on which assertion statement it failed, you still have no idea why. There is no overall picture and it is not possible to deduce what particular parts of the implementation is faulty.
 
-![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/before-console.png)
+![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_asserting_on_the_elements_of_the_list/before-console.png)
 
 Also, writing all these assertions is large boiler plate. It is error prone (e.g. index) and contains a lot of duplication.
 
@@ -82,9 +82,9 @@ public class RefactoredMessagesSorterTest {
 
 The test is easy to understand, you can clearly see expected order of messages, no duplication, no boiler plate and good diagnostics:
 
-![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/after-console.png)
+![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_asserting_on_the_elements_of_the_list/after-console.png)
 
-![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/after-comparison.png)
+![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_asserting_on_the_elements_of_the_list/after-comparison.png)
 
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_09_fake_not_meeting_the_contract_of_the_interface/description.md)

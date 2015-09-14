@@ -59,4 +59,4 @@ The implementation is correct, the tests are correct as well and they are passin
 Remove `static` keyword from the builder declaration. Do not declare in tests any static mutable objects.
 
 
-#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_asserting_on_the_elements_of_the_list/description.md)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_asserting_on_the_elements_of_the_list/description.md)

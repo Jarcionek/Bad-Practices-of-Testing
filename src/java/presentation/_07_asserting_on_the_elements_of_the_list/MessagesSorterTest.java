@@ -1,4 +1,4 @@
-package presentation._08_asserting_on_the_elements_of_the_list;
+package presentation._07_asserting_on_the_elements_of_the_list;
 
 import org.junit.Test;
 
