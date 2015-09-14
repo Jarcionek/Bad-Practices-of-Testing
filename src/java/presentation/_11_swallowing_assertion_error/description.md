@@ -30,6 +30,7 @@ Another problem is that fail() gives poor diagnostics and all we will see is `ja
 
 1. Never catch more than you need to - change `Error` in catch block to `DbError`
 2. If you do not assert on exception’s message, use `@Test(expected = DbError.class)` instead of try-catch
+    - if your test method has a setup, be sure that it is not the setup throwing the exception
 3. Consider putting `fail()` after the catch block and putting `return` inside it
 4. Always add a meaningful message to the `fail()` statement - here it could be e.g. `expected DbError but not thrown`
 
