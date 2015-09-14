@@ -87,4 +87,4 @@ The test is easy to understand, you can clearly see expected order of messages, 
 ![alt text](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_07_asserting_on_the_elements_of_the_list/after-comparison.png)
 
 
-#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_09_fake_not_meeting_the_contract_of_the_interface/description.md)
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_08_fake_not_meeting_the_contract_of_the_interface/description.md)

@@ -1,4 +1,4 @@
-package presentation._09_fake_not_meeting_the_contract_of_the_interface;
+package presentation._08_fake_not_meeting_the_contract_of_the_interface;
 
 public class RefactoredFakeUuidProvider implements UuidProvider {
 
