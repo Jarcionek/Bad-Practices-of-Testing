@@ -1,4 +1,4 @@
-## Asserting on exception message
+## Asserting on exception's message
 
 
 ### Domain:
