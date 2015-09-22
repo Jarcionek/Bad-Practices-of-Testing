@@ -1,4 +1,4 @@
-## Testing implementation instead of behaviour
+## Asserting on exception message
 
 
 ### Domain:
