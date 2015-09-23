@@ -38,7 +38,7 @@ Another minor problem may be a very strict assertion on the error message. It ma
 ### Solution:
 
 ```java
-public class RefactoredStandardDeviationCalculatorTest {
+public class Refactored_1_StandardDeviationCalculatorTest {
 
     private final StandardDeviationCalculator standardDeviationCalculator = new StandardDeviationCalculator();
 
@@ -61,7 +61,7 @@ public class RefactoredStandardDeviationCalculatorTest {
 or
 
 ```java
-public class RefactoredStandardDeviationCalculatorTest {
+public class Refactored_2_StandardDeviationCalculatorTest {
 
     @Rule
     public final ExpectedException expectedException = ExpectedException.none();
