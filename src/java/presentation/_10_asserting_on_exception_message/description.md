@@ -58,5 +58,29 @@ public class RefactoredStandardDeviationCalculatorTest {
 }
 ```
 
+or
+
+```java
+public class RefactoredStandardDeviationCalculatorTest {
+
+    @Rule
+    public final ExpectedException expectedException = ExpectedException.none();
+
+    private final StandardDeviationCalculator standardDeviationCalculator = new StandardDeviationCalculator();
+
+    @Test
+    public void throwsExceptionIfAnyValueIsNegative() {
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage(allOf(containsString("non-negative"), containsString("-2.0")));
+
+        standardDeviationCalculator.calculate(3.0, 0.0, -2.0);
+    }
+
+    // other tests for actual implementation
+
+}
+```
+
+
 
 #### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_11_swallowing_assertion_error/description.md)

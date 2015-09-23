@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.fail;
 
-public class RefactoredStandardDeviationCalculatorTest {
+public class Refactored_1_StandardDeviationCalculatorTest {
 
     private final StandardDeviationCalculator standardDeviationCalculator = new StandardDeviationCalculator();
 
