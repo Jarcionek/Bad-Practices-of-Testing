@@ -27,3 +27,4 @@ No code has been taken from these projects. All code shown has been written from
 14. [Asserting on default value](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_14_asserting_on_default_value/description.md)
 15. [Non distinct test data](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_15_non_distinct_test_data/description.md)
 16. [JMock verifying method was called](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_16_jmock_verifying_method_was_called/description.md)
+17. [Fluent assertions (AssertJ)](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_17_fluent_assertions/description.md)

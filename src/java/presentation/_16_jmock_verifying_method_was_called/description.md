@@ -76,5 +76,4 @@ public class RefactoredMockitoUserSettingsServiceTest {
 ```
 
 
-#### [Back to main page](https://github.com/Jarcionek/Bad-Practices-of-Testing)
-
+#### [Next page](https://github.com/Jarcionek/Bad-Practices-of-Testing/blob/master/src/java/presentation/_17_fluent_assertions/description.md)
